@@ -3,7 +3,7 @@ Alienvault OTX TAXII connector
 
 Set your Alienvault OTX API key and Taxii server in config.cfg.
 
-This script can then be used to download pulses from OTX, and import them into your Taxii complient client
+This script can then be used to download pulses from OTX, and import them into your Taxii compliant client.
 
 Run with:
 
