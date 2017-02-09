@@ -1,7 +1,7 @@
 # OTX-Apps-TAXII
 Alienvault OTX TAXII connector
 
-Set your Alienvault OTX API key and Taxii server in config.cfg.
+Set your Alienvault OTX API key and TAXII server in config.cfg.
 
 This script can then be used to download pulses from OTX, and import them into your Taxii compliant client.
 
@@ -13,7 +13,10 @@ the first time, then:
 
 - python2.7 otx-taxii.py check_new
 
-for updates
+for updates.
+
+
+
 
 
 ### Setting up config.cfg
@@ -35,7 +38,7 @@ uri=/taxii-data
   
   {Example: _Soltra Edge Taxii Server_} 
   
-  However there are some case where it does matter:
+  However there are some cases where it does matter:
   
  {Example: _DHS AIS Taxii inbox'ing(push)_}
  
