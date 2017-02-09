@@ -12,11 +12,13 @@ from stix.common import InformationSource, Identity
 from cybox.common import Time
 from lxml import etree as et
 from stix.common.vocabs import PackageIntent
-from stix.utils import set_id_namespace
+from stix.core import STIXPackage
+from mixbox.idgen import set_id_namespace
+from mixbox.namespaces import Namespace
 from IPy import *
 
 PULSE_SERVER_BASE = "https://otx.alienvault.com/"
-STIXNAMESPACE = {"https://otx.alienvault.com" : "alienvault-otx"}
+STIXNAMESPACE =  Namespace("https://otx.alienvault.com", "alienvault-otx")
 set_id_namespace(STIXNAMESPACE)
 
 class StixExport:
