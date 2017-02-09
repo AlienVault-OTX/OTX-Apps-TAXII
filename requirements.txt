@@ -1,3 +1,4 @@
-libtaxii
-stix
+libtaxii==1.1.110
+stix==1.2.0.2
+cybox==2.1.0.13
 IPy==0.83
