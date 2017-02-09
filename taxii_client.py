@@ -40,7 +40,7 @@ class Client:
             client = tc.HttpClient()
 
             if self.scheme:
-                if 'https' in self.scheme:
+                if 'https' in self.scheme.lower():
                     client.setUseHttps(True)
 
             if self.usr_pass:
@@ -50,10 +50,10 @@ class Client:
                 client.setAuthType(client.AUTH_CERT_BASIC)
 
             client.setAuthCredentials({
-                'username' : self.usr_name,
-                'password' : self.usr_pass,
-                'key_file' : self.usr_cert_prv,
-                'cert_file': self.usr_cert_pub
+                    'username' : self.usr_name,
+                    'password' : self.usr_pass,
+                    'key_file' : self.usr_cert_prv,
+                    'cert_file': self.usr_cert_pub
                 })
 
             return client
@@ -61,7 +61,7 @@ class Client:
     def gen_post(self, msg_type, xml):
         content_block = tm11.ContentBlock(tm11.ContentBinding(Client.BINDING_STIX), xml)
 
-        if msg_type == 'inbox':
+        if msg_type.lower() == 'inbox':
             post = tm11.InboxMessage(tm11.generate_message_id())
             post.content_blocks.append(content_block)
             post.message = Client.CLIENT_MSG
