@@ -19,22 +19,22 @@ for updates.
 
 
 
-### Setting up config.cfg
+### Setting up Config.cfg
 
-For example a Taxii server using HTTPS:
+For example a Taxii server using HTTPS might look like:
 ```
 [taxii]
 server_ip=https://192.168.1.187 
 ```
-- If you are providing a hostname _*or*_ an IP address you need to include https://
+- You need to include https:// - whether its a hostname or an IP address
 
-What is the diffrence _discovery_path_ vs _uri_?
+What is the difference between _discovery_path_ and _uri_?
 ```
 [taxii]
 discovery_path=/taxii-discovery-service/
 uri=/taxii-data
 ```
-- While in the vast majority of cases the _discovery_path_ and _uri_ can be used interchangeablely as the post_request captured is independent of the destination.
+- In most cases _discovery_path_ and _uri_ can be used interchangeablely - as the post_request captured is independent of the destination.
   
   {Example: _Soltra Edge Taxii Server_} 
   
@@ -42,6 +42,6 @@ uri=/taxii-data
   
  {Example: _DHS AIS Taxii inbox'ing(push)_}
  
-- In the rare cases where it does matter, you will need to look at the TAXII Server's collection_info to find the path needed.
+- When it does matter, you will need to look at the TAXII Server's collection_info to find the path needed.
  
 
